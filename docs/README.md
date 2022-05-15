@@ -21,7 +21,7 @@ features:
 - title: Nginx
   details: Nginx("engine x")是一款是由俄罗斯的程序设计师Igor Sysoev所开发高性能的 Web 和 反向代理 服务器。
 - title: Jenkins
-  details: Jenkins是一个基于 Java 开发的开源软件项目，用于监控持续重复的工作，旨在提供一个开放易用的软件平台，使软件项目可以进行持续集成。
+  details: Jenkins是一个基于 Java 开发的开源软件项目，用于监控持续重复的工作，使软件项目可以进行持续集成。
 - title: 数据库
   details: MySQL Redis
 - title: 网络基础
