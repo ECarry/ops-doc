@@ -65,12 +65,12 @@ module.exports = {
         text: '数据库',
         children: [
           {
-            text: 'Linux 基础',
-            link: '/iinux/base'
+            text: 'MySQL',
+            link: '/DB/mysql'
           },
           {
-            text: 'Shell',
-            link: '/iinux/shell'
+            text: 'Redis',
+            link: '/db/redis'
           }
         ],
       },
