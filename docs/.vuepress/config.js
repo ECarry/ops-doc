@@ -3,7 +3,7 @@ const { docsearchPlugin } = require('@vuepress/plugin-docsearch')
 
 module.exports = {
   lang: 'zh-CN',
-  title: '运维面试宝典',
+  title: '运维宝典',
   description: '无限进步',
   head: [['link', { rel: 'icon', href: '/logo.png' }]],
   plugins: [
@@ -43,10 +43,13 @@ module.exports = {
             text: 'Docker',
             link: '/middleware/docker'
           },
-
           {
             text: 'Jenkins',
             link: '/middleware/jenkins'
+          },
+          {
+            text: 'Kubernetes',
+            link: '/middleware/kubernetes'
           },
           {
             text: 'Nginx',

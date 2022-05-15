@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /image.png
-heroText: 运维面试宝典
+heroText: 运维宝典
 tagline: 无限进步
 actions:
   - text: 开始内卷 →
@@ -10,8 +10,8 @@ actions:
 features:
 - title: Linux 基础
   details: Linux 是一种自由和开放源码的类 UNIX 操作系统。
-- title: Shell
-  details: Shell Script。
+- title: Kubernetes
+  details: kubernetes用于管理云平台中多个主机上的容器化的应用，目标是让部署容器化的应用简单并且高效。
 - title: ZABBIX
   details: Zabbix是企业级开源监控解决方案，支持实时监控数万台服务器、虚拟机和网络设备，采集百万级监控指标。
 - title: Ansible
