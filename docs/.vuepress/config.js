@@ -1,7 +1,5 @@
 const { defaultTheme } = require('@vuepress/theme-default')
 const { docsearchPlugin } = require('@vuepress/plugin-docsearch')
-const { backToTopPlugin } = require('@vuepress/plugin-back-to-top')
-const { gitPlugin } = require('@vuepress/plugin-git')
 
 module.exports = {
   lang: 'zh-CN',
@@ -21,7 +19,7 @@ module.exports = {
     contributors: false,
     editLinkText: '在 GitHub 上编辑此页',
     editLinkPattern: ':repo/edit/:branch/:path',
-    navbar: require('./navbar'),
-    sidebar: require('./sidebar')
+    navbar: require('./configs/navbar'),
+    sidebar: require('./configs/sidebar')
   })
 }
