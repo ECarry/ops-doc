@@ -1,5 +1,7 @@
 const { defaultTheme } = require('@vuepress/theme-default')
 const { docsearchPlugin } = require('@vuepress/plugin-docsearch')
+const { backToTopPlugin } = require('@vuepress/plugin-back-to-top')
+const { gitPlugin } = require('@vuepress/plugin-git')
 
 module.exports = {
   lang: 'zh-CN',
@@ -7,11 +9,19 @@ module.exports = {
   description: '无限进步',
   head: [['link', { rel: 'icon', href: '/logo.png' }]],
   plugins: [
+    backToTopPlugin(),
     docsearchPlugin({
+      // 配置项
+    }),
+    gitPlugin({
       // 配置项
     }),
   ],
   theme: defaultTheme({
+    lastUpdatedText: '上次更新',
+    docsBranch: 'main',
+    docsDir: 'docs',
+    editLinkPattern: ':repo/-/edit/:branch/:path',
     navbar: [
       // NavbarItem
       {
@@ -37,27 +47,23 @@ module.exports = {
         children: [
           {
             text: 'Ansible',
-            link: '/middleware/ansible'
-          },
-          {
-            text: 'Docker',
-            link: '/middleware/docker'
+            link: '/devops/ansible'
           },
           {
             text: 'Jenkins',
-            link: '/middleware/jenkins'
-          },
-          {
-            text: 'Kubernetes',
-            link: '/middleware/kubernetes'
+            link: '/devops/jenkins'
           },
           {
             text: 'Nginx',
-            link: '/middleware/nginx'
+            link: '/devops/nginx'
+          },
+          {
+            text: '容器',
+            link: '/devops/container'
           },
           {
             text: 'Zabbix',
-            link: '/middleware/zabbix'
+            link: '/devops/zabbix'
           }
         ],
       },
