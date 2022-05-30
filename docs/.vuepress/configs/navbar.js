@@ -1,9 +1,5 @@
 const navbar = [
   // NavbarItem
-  {
-    text: 'Home',
-    link: '/',
-  },
   // NavbarGroup
   {
     text: 'Linux',

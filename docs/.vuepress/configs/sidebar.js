@@ -32,7 +32,10 @@ const sidebar = {
       text: '监控',
       collapsible: true,
       children: [
-        '/devops/monitor/zabbix.md'
+        '/devops/monitor/zabbix.md',
+        '/devops/monitor/prometheus.md',
+        '/devops/monitor/grafana.md'
+
       ]
     }
   ]
