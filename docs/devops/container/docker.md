@@ -1,14 +1,14 @@
 # Docker
 
-## docker-compose
+## :octopus: docker-compose
 
 ### 部署 Django 项目
 
-#### 🌲项目树
+#### :herb: 项目树
 
 ![image-20220530160721681](./Docker.assets/image-20220530160721681.png)
 
-#### 🐳 Dockerfile 编写
+#### :pencil: Dockerfile 编写
 
 ```dockerfile
 # 从镜像仓库获取最新 python 镜像
@@ -34,7 +34,7 @@ COPY . /code/
 
 ```
 
-#### 🐳 docker-compose 编写
+#### :pencil: docker-compose 编写
 
 ```yaml
 version: "3"
@@ -51,7 +51,7 @@ services:
 
 ```
 
-#### 🎉 运行命令
+#### :confetti_ball: 运行命令
 
 直接运行：`docker-compose up`
 
