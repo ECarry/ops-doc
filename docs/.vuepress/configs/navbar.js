@@ -3,16 +3,7 @@ const navbar = [
   // NavbarGroup
   {
     text: 'Linux',
-    children: [
-      {
-        text: 'Linux 基础',
-        link: '/linux/base'
-      },
-      {
-        text: 'Shell',
-        link: '/linux/shell'
-      }
-    ],
+    link: '/linux'
   },
   {
     text: 'DevOps',

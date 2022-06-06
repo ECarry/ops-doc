@@ -1,4 +1,18 @@
 const sidebar = {
+  'linux': [
+    {
+      text: 'Linux 基础',
+      link: '/linux/base.md'
+    },
+    {
+      text: 'shell',
+      link: '/linux/shell.md'
+    },
+    {
+      text: '面试',
+      link: '/linux/interview.md'
+    },
+  ],
   '/devops': [
     {
       text: 'DevOps 流程',
