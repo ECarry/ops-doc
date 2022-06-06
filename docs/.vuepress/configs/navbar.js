@@ -35,6 +35,10 @@ const navbar = [
     text: '网络基础',
     link: '/network',
   },
+  {
+    text: '正则表达式',
+    link: '/reg',
+  },
   // 字符串 - 页面文件路径
   {
     text: 'GitHub',
