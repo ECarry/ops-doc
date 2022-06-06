@@ -1,17 +1,30 @@
 const sidebar = {
-  'linux': [
+  '/linux': [
+    {
+      text: 'Linux 学习面试',
+      link: '/linux/index.md'
+    },
     {
       text: 'Linux 基础',
-      link: '/linux/base.md'
+      collapsible: true,
+      children: [
+        '/linux/base/base.md'
+      ]
     },
     {
       text: 'shell',
-      link: '/linux/shell.md'
+      collapsible: true,
+      children: [
+        '/linux/shell/shell.md'
+      ]
     },
     {
       text: '面试',
-      link: '/linux/interview.md'
-    },
+      collapsible: true,
+      children: [
+        '/linux/interview/interview.md'
+      ]
+    }
   ],
   '/devops': [
     {
