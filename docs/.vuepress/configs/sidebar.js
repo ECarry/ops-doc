@@ -19,6 +19,15 @@ const sidebar = {
       ]
     },
     {
+      text: '三剑客',
+      collapsible: true,
+      children: [
+        '/linux/gas/grep.md',
+        '/linux/gas/sed.md',
+        '/linux/gas/awk.md'
+      ]
+    },
+    {
       text: '面试',
       collapsible: true,
       children: [
