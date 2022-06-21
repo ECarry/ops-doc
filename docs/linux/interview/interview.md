@@ -105,6 +105,11 @@ Linux 通过 inode 节点表将文件的逻辑结构和物理结构进行转换�
 
 `route add -net 192.168.3.0/24 netmask 255.255.255.0 gw 102.168.1.254`
 
+### 10. 登录需要加载文件
+
+`/etc/profile` `/etc/bashrc` `~/.bashrc` `~/.bash_profile`
+
 ## shell
 
 ### 1. shell bash
+

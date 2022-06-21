@@ -24,7 +24,7 @@ const navbar = [
   },
   {
     text: '网络基础',
-    link: '/network',
+    link: '/network/',
   },
   {
     text: '正则表达式',
