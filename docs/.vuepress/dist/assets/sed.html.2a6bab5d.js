@@ -1,0 +1,1 @@
+import{_ as e,o as s,a as t,b as a,d as o}from"./app.00be45a4.js";const d={},_={id:"sed",tabindex:"-1"},c=a("a",{class:"header-anchor",href:"#sed","aria-hidden":"true"},"#",-1),r=o(" sed"),n=[c,r];function h(i,f){return s(),t("h1",_,n)}var m=e(d,[["render",h],["__file","sed.html.vue"]]);export{m as default};

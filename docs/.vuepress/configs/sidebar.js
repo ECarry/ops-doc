@@ -74,6 +74,22 @@ const sidebar = {
 
       ]
     }
+  ],
+  '/storage': [
+    {
+      text: '存储基础',
+      link: '/storage/index.md'
+    },
+    {
+      text: 'SAN',
+      collapsible: true,
+      children: [
+        '/storage/san.md',
+        '/storage/fc.md',
+        '/storage/ip.md',
+        '/storage/bak.md',
+      ]
+    }
   ]
 }
 

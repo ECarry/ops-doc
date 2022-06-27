@@ -1,0 +1,1 @@
+import{_ as a,o as e,a as t,b as r,d as n}from"./app.00be45a4.js";const o={},s={id:"grafana",tabindex:"-1"},_=r("a",{class:"header-anchor",href:"#grafana","aria-hidden":"true"},"#",-1),c=n(" Grafana"),d=[_,c];function f(h,i){return e(),t("h1",s,d)}var m=a(o,[["render",f],["__file","grafana.html.vue"]]);export{m as default};

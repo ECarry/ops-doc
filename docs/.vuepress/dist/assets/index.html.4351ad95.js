@@ -1,0 +1,1 @@
+import{_ as e,o as t,a as o,b as s,d as a}from"./app.00be45a4.js";const _={},c={id:"osi",tabindex:"-1"},r=s("a",{class:"header-anchor",href:"#osi","aria-hidden":"true"},"#",-1),n=a(" OSI"),d=[r,n];function i(h,f){return t(),o("h1",c,d)}var x=e(_,[["render",i],["__file","index.html.vue"]]);export{x as default};

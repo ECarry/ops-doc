@@ -1,0 +1,1 @@
+const e={key:"v-744c2894",path:"/reg/",title:"\u6B63\u5219\u8868\u8FBE\u5F0F",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u8BED\u6CD5\u53C2\u8003",slug:"\u8BED\u6CD5\u53C2\u8003",children:[]}],git:{updatedTime:1655817253e3},filePathRelative:"reg/index.md"};export{e as data};

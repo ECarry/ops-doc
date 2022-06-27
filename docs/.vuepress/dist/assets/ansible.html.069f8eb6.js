@@ -1,0 +1,1 @@
+const e={key:"v-40248703",path:"/devops/automate/ansible.html",title:"Ansible",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1652711438e3},filePathRelative:"devops/automate/ansible.md"};export{e as data};

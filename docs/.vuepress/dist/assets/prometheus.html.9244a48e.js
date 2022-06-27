@@ -1,0 +1,1 @@
+const e={key:"v-608b8321",path:"/devops/monitor/prometheus.html",title:"Prometheus",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1653872361e3},filePathRelative:"devops/monitor/prometheus.md"};export{e as data};

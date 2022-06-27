@@ -1,0 +1,1 @@
+import{_ as e,o as t,a as o,b as s,d as r}from"./app.00be45a4.js";const a={},_={id:"prometheus",tabindex:"-1"},c=s("a",{class:"header-anchor",href:"#prometheus","aria-hidden":"true"},"#",-1),h=r(" Prometheus"),n=[c,h];function d(i,m){return t(),o("h1",_,n)}var f=e(a,[["render",d],["__file","prometheus.html.vue"]]);export{f as default};

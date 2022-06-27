@@ -30,6 +30,10 @@ const navbar = [
     text: '正则表达式',
     link: '/reg',
   },
+  {
+    text: '存储基础',
+    link: '/storage',
+  },
   // 字符串 - 页面文件路径
   {
     text: 'GitHub',

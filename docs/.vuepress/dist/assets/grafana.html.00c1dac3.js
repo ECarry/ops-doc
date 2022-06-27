@@ -1,0 +1,1 @@
+const a={key:"v-39a99bba",path:"/devops/monitor/grafana.html",title:"Grafana",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1653872361e3},filePathRelative:"devops/monitor/grafana.md"};export{a as data};

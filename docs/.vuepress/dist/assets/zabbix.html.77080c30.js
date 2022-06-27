@@ -1,0 +1,1 @@
+import{_ as e,o as a,a as t,b as o,d as s}from"./app.00be45a4.js";const _={},c={id:"zabbix",tabindex:"-1"},r=o("a",{class:"header-anchor",href:"#zabbix","aria-hidden":"true"},"#",-1),i=s(" Zabbix"),n=[r,i];function d(b,h){return a(),t("h1",c,n)}var f=e(_,[["render",d],["__file","zabbix.html.vue"]]);export{f as default};

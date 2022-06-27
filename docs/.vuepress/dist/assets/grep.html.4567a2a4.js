@@ -1,0 +1,1 @@
+import{_ as e,o as t,a as r,b as a,d as o}from"./app.00be45a4.js";const s={},_={id:"grep",tabindex:"-1"},c=a("a",{class:"header-anchor",href:"#grep","aria-hidden":"true"},"#",-1),n=o(" grep"),d=[c,n];function h(i,p){return t(),r("h1",_,d)}var l=e(s,[["render",h],["__file","grep.html.vue"]]);export{l as default};

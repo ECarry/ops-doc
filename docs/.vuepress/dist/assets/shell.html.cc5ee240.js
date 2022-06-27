@@ -1,0 +1,1 @@
+const e={key:"v-91df2048",path:"/linux/shell/shell.html",title:"\u{1F41A} Shell",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1654508892e3},filePathRelative:"linux/shell/shell.md"};export{e as data};

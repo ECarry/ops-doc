@@ -1,0 +1,1 @@
+const e={key:"v-703b75de",path:"/linux/base/base.html",title:"\u{1F427} Linux \u57FA\u7840",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1655817253e3},filePathRelative:"linux/base/base.md"};export{e as data};

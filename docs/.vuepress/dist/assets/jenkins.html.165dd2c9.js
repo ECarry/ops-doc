@@ -1,0 +1,1 @@
+const e={key:"v-0c752092",path:"/devops/cicd/jenkins.html",title:"Jenkins",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1652711438e3},filePathRelative:"devops/cicd/jenkins.md"};export{e as data};

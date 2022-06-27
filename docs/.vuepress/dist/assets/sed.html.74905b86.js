@@ -1,0 +1,1 @@
+const e={key:"v-0ff31b9e",path:"/linux/gas/sed.html",title:"sed",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1654654544e3},filePathRelative:"linux/gas/sed.md"};export{e as data};

@@ -1,0 +1,1 @@
+const e={key:"v-6e53616e",path:"/linux/gas/awk.html",title:"awk",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1654654544e3},filePathRelative:"linux/gas/awk.md"};export{e as data};

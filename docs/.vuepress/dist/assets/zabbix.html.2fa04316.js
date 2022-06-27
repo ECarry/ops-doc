@@ -1,0 +1,1 @@
+const t={key:"v-b27a3916",path:"/devops/monitor/zabbix.html",title:"Zabbix",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1652711438e3},filePathRelative:"devops/monitor/zabbix.md"};export{t as data};

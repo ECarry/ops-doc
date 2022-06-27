@@ -1,0 +1,1 @@
+const e={key:"v-035d62ce",path:"/linux/gas/grep.html",title:"grep",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1654654544e3},filePathRelative:"linux/gas/grep.md"};export{e as data};

@@ -1,0 +1,1 @@
+import{_ as e,o as t,a,b as n,d as o}from"./app.00be45a4.js";const s={},_={id:"linux-\u8FD0\u7EF4\u901A",tabindex:"-1"},c=n("a",{class:"header-anchor",href:"#linux-\u8FD0\u7EF4\u901A","aria-hidden":"true"},"#",-1),r=o(" Linux \u8FD0\u7EF4\u901A"),d=[c,r];function i(h,l){return t(),a("h1",_,d)}var f=e(s,[["render",i],["__file","index.html.vue"]]);export{f as default};
