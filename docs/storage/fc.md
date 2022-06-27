@@ -44,7 +44,191 @@ FC HBA的WWN具有两种类型：
 - WWPN（World Wide Port Name） 
 
 	全球惟一端口名字， 分配给每一个光纤通道端口的全球惟一的64 位标示符， 每个 WWPN被该端口独享。WWPN在存储区域网络中的应用就等同于MAC地址在以太网协议 中的应用。
-	
+## FC 基本配置
+
+### Brocade 300 光交配置
+
+#### 1. 设备图
+
+![image-20220627165958532](./fc.assets/image-20220627165958532.png)
+
+#### 2. 配置准备
+
+Brocade 交换机采用 B/S 架构，远程客户端通过交换机以太网管理端口实现对交换机的监控及配置。在配置之前首先要在客户端安装 [Java运行环境 JRE](https://pan.ecarry.cc/software/JRE6.0.zip)
+
+#### 3. 设备配置
+
+修改客户端 ip 地址与交换机为同一子网 10.77.77.**
+
+打开浏览器输入 http://10.77.77.77 ，之后出现登录对话框：
+
+- user: `admin `
+
+- password: `password`
+
+#### 4. 常用配置命令
+
+详细配置见官方文档：[Brocade Switch Cookbook](https://pan.ecarry.cc/%E5%8D%9A%E7%A7%91%E5%85%89%E4%BA%A4%E6%89%8B%E5%86%8C/Brocade-Switch-Cookbook.pdf)
+
+##### 基础命令
+
+```shell
+Brocade300:admin> version	# 显示交换机信息
+Kernel:     2.6.14.2
+Fabric OS:  v7.0.0c
+Made on:    Thu Oct 27 00:27:45 2011
+Flash:	    Mon Sep 17 04:34:39 2012
+BootProm:   1.0.9
+Brocade300:admin> ipAddrShow	# 显示交换机 ip
+
+SWITCH
+Ethernet IP Address: 192.168.88.103
+Ethernet Subnetmask: 255.255.255.0
+Gateway IP Address: 192.168.88.1
+DHCP: Off
+
+Brocade300:admin> ipaddrset # 配置交换机管理口
+Ethernet IP Address [192.168.88.103]:
+Ethernet Subnetmask [255.255.255.0]:
+Gateway IP Address [192.168.88.1]:
+DHCP [Off]:
+
+Brocade300:admin> switchshow # 显示交换机信息
+switchName:	Brocade300
+switchType:	71.2
+switchState:	Online
+switchMode:	Native
+switchRole:	Principal
+switchDomain:	1
+switchId:	fffc01
+switchWwn:	10:00:00:27:f8:07:d7:3f
+zoning:		ON (db)
+switchBeacon:	OFF
+
+Index Port Address Media Speed State     Proto
+==============================================
+   0   0   010000   id     N8   No_Light    FC
+   1   1   010100   id     N8   No_Light    FC
+   2   2   010200   id     N8   No_Light    FC
+   3   3   010300   id     N8   No_Light    FC
+   4   4   010400   id     N8   No_Light    FC
+   5   5   010500   id     N8   No_Light    FC
+   6   6   010600   id     N8   No_Light    FC
+   7   7   010700   id     N8   No_Light    FC
+   8   8   010800   --     N8   No_Module   FC  (No POD License) Disabled
+   9   9   010900   --     N8   No_Module   FC  (No POD License) Disabled
+  10  10   010a00   --     N8   No_Module   FC  (No POD License) Disabled
+  11  11   010b00   --     N8   No_Module   FC  (No POD License) Disabled
+  12  12   010c00   --     N8   No_Module   FC  (No POD License) Disabled
+  13  13   010d00   --     N8   No_Module   FC  (No POD License) Disabled
+  14  14   010e00   --     N8   No_Module   FC  (No POD License) Disabled
+  15  15   010f00   --     N8   No_Module   FC  (No POD License) Disabled
+  16  16   011000   --     N8   No_Module   FC  (No POD License) Disabled
+  17  17   011100   --     N8   No_Module   FC  (No POD License) Disabled
+  18  18   011200   --     N8   No_Module   FC  (No POD License) Disabled
+  19  19   011300   --     N8   No_Module   FC  (No POD License) Disabled
+  20  20   011400   --     N8   No_Module   FC  (No POD License) Disabled
+  21  21   011500   --     N8   No_Module   FC  (No POD License) Disabled
+  22  22   011600   --     N8   No_Module   FC  (No POD License) Disabled
+  23  23   011700   --     N8   No_Module   FC  (No POD License) Disabled
+  
+Brocade300:admin> switchstatusshow # 显示交换机运行状态
+Switch Health Report                        Report time: 06/27/2022 09:02:40 PM
+Switch Name: 	Brocade300
+IP address:	192.168.88.103
+SwitchState:	HEALTHY
+Duration:	4586:12
+
+Power supplies monitor	HEALTHY
+Temperatures monitor  	HEALTHY
+Fans monitor          	HEALTHY
+Flash monitor         	HEALTHY
+Marginal ports monitor	HEALTHY
+Faulty ports monitor  	HEALTHY
+Missing SFPs monitor  	HEALTHY
+Error ports monitor  	HEALTHY
+
+
+All ports are healthy
+
+Brocade300:admin> cfgshow # 显示交换机配置信息
+Defined configuration:
+ cfg:	db	db01_zone; db02_zone
+ zone:	db01_zone
+		db01; DS8700
+ zone:	db02_zone
+		db02; DS8700
+ alias:	DS8700	1,1; 1,2
+ alias:	db01	1,0
+ alias:	db02	1,3
+
+Effective configuration:
+ cfg:	db
+ zone:	db01_zone
+		1,0
+		1,1
+		1,2
+ zone:	db02_zone
+		1,3
+		1,1
+		1,2
+		
+```
+
+##### 备份配置文件与还原
+
+**Uploading a configuration file in interactive mode**
+
+1. Verify that the FTP or SCP service is running on the host computer. 
+2. Connect to the switch and log in as admin. 
+3.  Enter the configUpload command. The command becomes interactive and you are prompted for the required information. 
+4.  Store a soft copy of the switch configuration information in a safe place for future reference.
+
+```shell
+switch:admin> configupload
+Protocol (scp, ftp, local) [ftp]:
+Server Name or IP Address [host]: 10.1.2.3
+User Name [user]: UserFoo
+Path/Filename [<home dir>/config.txt]: switchConfig.txt
+Section (all|chassis|FID# [all]): chassis
+Password: <hidden>
+configUpload complete 
+```
+
+**Configuration file restoration** 
+
+1. Verify that the FTP service is running on the server where the backup configuration file is located. 
+2. Connect to the switch and log in using an account assigned to the admin role, and if necessary with the chassis-role permission.
+3. If there are any changed parameters in the configuration file that do not belong to SNMP, Fabric Watch, or ACL, disable the switch by entering the `switchDisable` command. 
+4. Enter the `configDownload` command. The command becomes interactive and you are prompted for the required information. 
+5. At the “Do you want to continue [y/n]” prompt, enter y. 
+6. Wait for the configuration to be restored. 
+7. If you disabled the switch, enter the `switchEnable` command when the process is finished. 
+
+```shell
+switch:admin> configdownload
+Protocol (scp, ftp, local) [ftp]:
+Server Name or IP Address [host]: 10.1.2.3 
+User Name [user]: UserFoo
+Path/Filename [<home dir>/config.txt]:
+Section (all|chassis|FID\# [all]): all
+*** CAUTION ***
+This command is used to download a backed-up configuration
+for a specific switch. If using a file from a different
+switch, this file's configuration settings will override
+any current switch settings. Downloading a configuration
+file, which was uploaded from a different type of switch,
+may cause this switch to fail. A switch reboot might be
+required for some parameter changes to take effect.
+configDownload operation may take several minutes
+to complete for large files.
+Do you want to continue [y/n]: y
+Password: <hidden>
+configDownload complete. 
+```
+
+
+
 ## FC 交换机 Zone 概念
 
 - Zone 是可进行互通的端口或设备的名称构成的集合
