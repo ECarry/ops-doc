@@ -86,3 +86,7 @@ FC HBA的WWN具有两种类型：
 
 ### WWNs 绑定
 
+
+
+## FC 交换机 Zone 基本配置（CLI）
+
