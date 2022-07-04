@@ -22,17 +22,26 @@
 
 光纤网交换机中具有一些称为端口（Port）的连接部件，不同的端口根据其所连接的设 备类型，所起到的作用是不同的。光纤通道标准定义了以下端口：
 
+- D_Port
+  - 诊断端口，可以通过该端口隔离 ISL 以诊断链路级故障，只做诊断测试，不承担任何 Fabric 流量
+
 - F_Port
   - F端口也被称为光纤网端口，用于将服务器和存储设备连接到交换机上。一个被连接到 交换机F端口的设备就是一个节点（Node），用光纤通道术语来说，它被看作是一个N端 口（N_Port）。如果是在仲裁环路拓扑结构中，则被称为NL端口（NL_Port）。交换机通过特定的N端口或者是NL端口名称来识别这些光纤通道节点
-
 - E_Port
   - E端口也被称为扩展端口，被用于进行交换机之间的连接
+- EX_Port
+  - E_Port 的一种，用于连接 FC 路由器和边缘 Fabric。EX_Port 的连接终止于路由器，不能像 E_Port 连接的交换机那样可以融合 Fabric
 
 - FL_Port
   - FC交换机的一个交换端口可以作为环路的组成部分，数据可以从交换机中传输到环上。 在环路环境下正常工作的一个交换端口称之为 FL_port
-
 - G_Port：通用端口G端口
   - G端口是一种通用的端口，根据具体的实现方案，可以作为F端口或是E端口使用，也就 意味着G端口实际上可以被用作两种端口功能的组合。 由于G端口的自适应性， 在进行 FC-SAN的多交换机配置环境时，G端口为交换机提供了更好的灵活性并降低了每个端口 所耗费的管理成本
+- M_Port 
+  - 镜像端口，用于复制指定源端口和目的端口之间的流量
+
+- U_Port (GL_Port)
+  - 通用 FC 端口，最基本的 FC 端口类型。所有未识别的和未初始化的端口都属于 U_Port
+
 
 ## FC HBA 卡 WWN
 
@@ -273,4 +282,58 @@ configDownload complete.
 
 
 ## FC 交换机 Zone 基本配置（CLI）
+
+#### Alias 别名管理
+
+```shell
+# 创建别名，与交换机端口绑定
+Brocade300:admin> alicreate 'ibm_ds8700_spa01','1,0'
+Brocade300:admin> alicreate 'ibm_ds8700_spb01','1,1'
+Brocade300:admin> alicreate 'db01_hba01','1,2'
+Brocade300:admin> alicreate 'db02_hba01','1,3'
+# 查看配置好的别名
+Brocade300:admin> alishow
+Defined configuration:
+ alias:	db01_hba01
+		1,2
+ alias:	db02_hba01
+		1,3
+ alias:	ibm_ds8700_spa01
+		1,0
+ alias:	ibm_ds8700_spb01
+		1,1
+aliadd
+aliremove
+alidelete
+```
+
+#### Zone 分区管理
+
+```shell
+zonecreate
+zoneadd
+zoneremove
+zoneobjectcopy
+zoneobjectrename
+zoneobjectexpunge
+```
+
+#### CFG 配置管理
+
+```shell
+cfgshow
+cfgsave
+cfgenable
+cfgclear
+cfgsize
+cfgtransshow
+cfgtransabort
+cfgactvshow
+```
+
+#### 示例
+
+```shell
+
+```
 
